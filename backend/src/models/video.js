@@ -27,7 +27,7 @@ const videoSchema = new Schema({
   like: [
     {
       type: ObjectId,
-      ref: "like",
+      ref: "users",
     },
   ],
   comment: [
