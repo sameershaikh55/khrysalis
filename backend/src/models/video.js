@@ -24,6 +24,24 @@ const videoSchema = new Schema({
     type: String,
     trim: true,
   },
+  category: {
+    type: String,
+    enum: [
+      "All",
+      "Trending",
+      "Live",
+      "Gaming",
+      "Music",
+      "Travel",
+      "Sports",
+      "Animation",
+      "Game play",
+      "Streaming",
+      "Camping",
+      "Cast",
+    ],
+    default: "All", // Standardwert (optional)
+  },
   like: [
     {
       type: ObjectId,

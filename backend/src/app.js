@@ -14,14 +14,14 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 }
 
 // APP USE
-// app.use(
-//   "/public/images",
-//   express.static(path.resolve(__dirname, "../" + "public/images"))
-// );
-// app.use(
-//   "/public/videos",
-//   express.static(path.resolve(__dirname, "../" + "public/videos"))
-// );
+app.use(
+  "/public/images",
+  express.static(path.resolve(__dirname, "../" + "public/images"))
+);
+app.use(
+  "/public/videos",
+  express.static(path.resolve(__dirname, "../" + "public/videos"))
+);
 app.use(express.json());
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -30,6 +30,7 @@ app.use(cors());
 
 // ROUTE IMPORT
 const auth = require("./routes/auth");
+const channel = require("./routes/channel");
 
 // TESTING
 app.get("/", (req, res) => {
@@ -38,6 +39,7 @@ app.get("/", (req, res) => {
 
 // CONTROLLERS
 app.use("/api/auth", auth);
+app.use("/api/channel", channel);
 
 // Middleware for Errors
 app.use(errorMiddleware);

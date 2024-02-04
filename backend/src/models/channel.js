@@ -1,15 +1,17 @@
-import mongoose, { Schema } from "mongoose";
-const { ObjectId } = mongoose.Types;
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
+const { ObjectId } = require("mongodb");
 
 const channelSchema = new Schema({
   title: {
     type: String,
-    required: true,
+    required: [true, "Please enter Title"],
     trim: true,
+    unique: true,
   },
   description: {
     type: String,
-    required: true,
+    required: [true, "Please enter Description"],
     trim: true,
   },
   subscribers: {
@@ -42,4 +44,4 @@ const channelSchema = new Schema({
 
 const ChannelModel = mongoose.model("channel", channelSchema);
 
-export default ChannelModel;
+module.exports = ChannelModel;
