@@ -15,12 +15,8 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 
 // APP USE
 app.use(
-  "/public/images",
-  express.static(path.resolve(__dirname, "../" + "public/images"))
-);
-app.use(
-  "/public/videos",
-  express.static(path.resolve(__dirname, "../" + "public/videos"))
+  "/public/uploads",
+  express.static(path.resolve(__dirname, "../" + "public/uploads"))
 );
 app.use(express.json());
 app.use(cookieParser());
@@ -31,6 +27,7 @@ app.use(cors());
 // ROUTE IMPORT
 const auth = require("./routes/auth");
 const channel = require("./routes/channel");
+const video = require("./routes/video");
 
 // TESTING
 app.get("/", (req, res) => {
@@ -40,6 +37,7 @@ app.get("/", (req, res) => {
 // CONTROLLERS
 app.use("/api/auth", auth);
 app.use("/api/channel", channel);
+app.use("/api/video", video);
 
 // Middleware for Errors
 app.use(errorMiddleware);

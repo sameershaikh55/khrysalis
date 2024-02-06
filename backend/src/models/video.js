@@ -1,15 +1,16 @@
-import mongoose, { Schema } from "mongoose";
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 const { ObjectId } = mongoose.Types;
 
 const videoSchema = new Schema({
   title: {
     type: String,
-    required: true,
+    required: [true, "Please enter Title"],
     trim: true,
   },
   description: {
     type: String,
-    required: true,
+    required: [true, "Please enter Description"],
     trim: true,
   },
   view: {
@@ -66,4 +67,4 @@ const videoSchema = new Schema({
 
 const VideoModel = mongoose.model("video", videoSchema);
 
-export default VideoModel;
+module.exports = VideoModel;

@@ -26,7 +26,7 @@ const channelSchema = new Schema({
     type: String,
     trim: true,
   },
-  video: [
+  videos: [
     {
       type: ObjectId,
       ref: "video",

@@ -1,7 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# public
+backend/public/uploads
+
 # config
-backend\src\config\config.env
+backend/src/config/config.env
 
 # dependencies
 backend/node_modules
