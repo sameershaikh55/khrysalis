@@ -28,6 +28,7 @@ app.use(cors());
 const auth = require("./routes/auth");
 const channel = require("./routes/channel");
 const video = require("./routes/video");
+const comment = require("./routes/comment");
 
 // TESTING
 app.get("/", (req, res) => {
@@ -38,6 +39,7 @@ app.get("/", (req, res) => {
 app.use("/api/auth", auth);
 app.use("/api/channel", channel);
 app.use("/api/video", video);
+app.use("/api/comment", comment);
 
 // Middleware for Errors
 app.use(errorMiddleware);
