@@ -36,6 +36,12 @@ const usersSchema = new Schema({
       ref: "channel",
     },
   ],
+  subscribed: [
+    {
+      type: ObjectId,
+      ref: "channel",
+    },
+  ],
   resetPasswordToken: {
     token: String,
     expire: Date,

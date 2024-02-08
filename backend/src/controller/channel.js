@@ -75,3 +75,23 @@ exports.updateChannelBG = catchAsyncErrors(async (req, res, next) => {
 
   sendResponse(true, 200, "channel", updatedChannel, res);
 });
+
+// subscribe
+exports.subscribe = catchAsyncErrors(async (req, res, next) => {
+  const userId = res.user._id;
+  const channelId = req.body.channel;
+
+  const updatedChannel = await ChannelModel.findByIdAndUpdate(
+    channelId,
+    { $push: { subscribers: userId } },
+    { new: true }
+  );
+
+  await UserModel.findByIdAndUpdate(
+    userId,
+    { $push: { subscribed: channelId } },
+    { new: true }
+  );
+
+  sendResponse(true, 200, "channel", updatedChannel, res);
+});

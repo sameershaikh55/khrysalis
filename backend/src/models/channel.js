@@ -14,10 +14,12 @@ const channelSchema = new Schema({
     required: [true, "Please enter Description"],
     trim: true,
   },
-  subscribers: {
-    type: Number,
-    default: 0,
-  },
+  subscribers: [
+    {
+      type: ObjectId,
+      ref: "users",
+    },
+  ],
   channelBG: {
     type: String,
     trim: true,
