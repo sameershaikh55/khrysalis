@@ -42,6 +42,12 @@ const usersSchema = new Schema({
       ref: "channel",
     },
   ],
+  likedVideos: [
+    {
+      type: ObjectId,
+      ref: "video",
+    },
+  ],
   resetPasswordToken: {
     token: String,
     expire: Date,

@@ -2,6 +2,7 @@ const ErrorHandler = require("../utils/errorhandler");
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const VideoModel = require("../models/video");
 const ChannelModel = require("../models/channel");
+const UserModel = require("../models/registration");
 const sendResponse = require("../utils/sendResponse");
 
 // register Channel
@@ -114,11 +115,24 @@ exports.likeVideo = catchAsyncErrors(async (req, res, next) => {
       { $pull: { like: userID } },
       { new: true }
     );
+
+    await UserModel.findByIdAndUpdate(
+      userID,
+      { $pull: { likedVideos: id } },
+      { new: true }
+    );
   } else {
     // If not liked, add the like
     updatedVideo = await VideoModel.findByIdAndUpdate(
       id,
       { $push: { like: userID } },
+      { new: true }
+    );
+
+    // If not liked, add the like
+    await UserModel.findByIdAndUpdate(
+      userID,
+      { $push: { likedVideos: id } },
       { new: true }
     );
   }
