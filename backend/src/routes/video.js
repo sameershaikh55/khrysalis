@@ -15,12 +15,16 @@ const {
   uploadThumbnailFile,
   uploadVideoFile,
   likeVideo,
+  allChannelVideos,
 } = require("../controller/video");
 
 // ROUTES
-router.route("/").post(authentication, createVideo);
+router
+  .route("/")
+  .get(authentication, allVideos)
+  .post(authentication, createVideo);
 
-router.route("/channel-videos/:id").get(authentication, allVideos);
+router.route("/channel-videos/:id").get(authentication, allChannelVideos);
 
 router
   .route("/single-video/:id")

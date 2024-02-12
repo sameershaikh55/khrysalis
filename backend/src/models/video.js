@@ -13,10 +13,12 @@ const videoSchema = new Schema({
     required: [true, "Please enter Description"],
     trim: true,
   },
-  view: {
-    type: Number,
-    default: 0,
-  },
+  view: [
+    {
+      type: ObjectId,
+      ref: "users",
+    },
+  ],
   video: {
     type: String,
     trim: true,

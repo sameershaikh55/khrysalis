@@ -19,15 +19,36 @@ exports.createVideo = catchAsyncErrors(async (req, res, next) => {
 });
 
 // login video
-exports.allVideos = catchAsyncErrors(async (req, res, next) => {
+exports.allChannelVideos = catchAsyncErrors(async (req, res, next) => {
   const { id } = req.params;
   const videos = await VideoModel.find({ channel: id });
   sendResponse(true, 200, "video", videos, res);
 });
 
+// all video
+exports.allVideos = catchAsyncErrors(async (req, res, next) => {
+  const videos = await VideoModel.find();
+  sendResponse(true, 200, "video", videos, res);
+});
+
 // logout video
 exports.videoDetail = catchAsyncErrors(async (req, res, next) => {
-  const videoDetail = await VideoModel.findById(req.params.id);
+  const { id } = req.params;
+
+  const videoDetail = await VideoModel.findById(id);
+
+  await VideoModel.findByIdAndUpdate(
+    id,
+    { $push: { view: res.user._id } },
+    { new: true }
+  );
+
+  await UserModel.findByIdAndUpdate(
+    id,
+    { $push: { playedHistory: id } },
+    { new: true }
+  );
+
   sendResponse(true, 200, "videoDetail", videoDetail, res);
 });
 

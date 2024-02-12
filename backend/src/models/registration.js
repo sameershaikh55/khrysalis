@@ -42,6 +42,12 @@ const usersSchema = new Schema({
       ref: "channel",
     },
   ],
+  playedHistory: [
+    {
+      type: ObjectId,
+      ref: "video",
+    },
+  ],
   likedVideos: [
     {
       type: ObjectId,
