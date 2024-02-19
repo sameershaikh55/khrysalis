@@ -44,7 +44,7 @@ exports.videoDetail = catchAsyncErrors(async (req, res, next) => {
   );
 
   await UserModel.findByIdAndUpdate(
-    id,
+    res.user._id,
     { $push: { playedHistory: id } },
     { new: true }
   );
