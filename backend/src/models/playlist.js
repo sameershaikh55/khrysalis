@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const { ObjectId } = require("mongodb");
 
-const channelSchema = new Schema({
+const playlistSchema = new Schema({
   title: {
     type: String,
     required: [true, "Please enter Title"],
@@ -14,35 +14,15 @@ const channelSchema = new Schema({
     required: [true, "Please enter Description"],
     trim: true,
   },
-  subscribers: [
-    {
-      type: ObjectId,
-      ref: "users",
-    },
-  ],
-  channelBG: {
-    type: String,
-    trim: true,
-  },
-  channelImage: {
-    type: String,
-    trim: true,
-  },
   videos: [
     {
       type: ObjectId,
       ref: "video",
     },
   ],
-  playlists: [
-    {
-      type: ObjectId,
-      ref: "playlist",
-    },
-  ],
-  user: {
+  channel: {
     type: ObjectId,
-    ref: "users",
+    ref: "channel",
   },
   createdAt: {
     type: Date,
@@ -50,6 +30,6 @@ const channelSchema = new Schema({
   },
 });
 
-const ChannelModel = mongoose.model("channel", channelSchema);
+const PlaylistModel = mongoose.model("playlist", playlistSchema);
 
-module.exports = ChannelModel;
+module.exports = PlaylistModel;
