@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-    div[role='tab'] {
-        @apply text-white;
-    }
+  div[role="tab"] {
+    @apply text-white;
+  }
 }

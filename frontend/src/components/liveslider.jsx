@@ -45,20 +45,20 @@ export default function App() {
                     <div className="flex bg-white w-[420px] h-[220px]">
                         <div className='relative w-[65%]'>
                             <img src={Clip6} className='w-full h-full' alt="" />
-                            <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
+                            <span className='bg-red-500 px-1 text-white-false text-sm absolute top-2 left-2 rounded tracking-wider'>
                                 LIVE
                             </span>
                             <div className="flex absolute w-full bottom-2 justify-between px-2">
                                 <div className='flex gap-x-1 items-center'>
-                                    <PiSpeakerLowBold className='text-white' />
-                                    <BsFillPlayFill className='text-white' />
+                                    <PiSpeakerLowBold className='text-white-false' />
+                                    <BsFillPlayFill className='text-white-false' />
                                 </div>
                                 <div className='flex gap-x-1'>
                                     <span className="bg-gray-500 text-xs rounded-full px-2">
                                         360p
                                     </span>
-                                    <AiOutlineSetting className='text-white' />
-                                    <BiFullscreen className='text-white' />
+                                    <AiOutlineSetting className='text-white-false' />
+                                    <BiFullscreen className='text-white-false' />
                                 </div>
                             </div>
                         </div>
@@ -73,10 +73,10 @@ export default function App() {
                                 556 viewers
                             </span>
                             <div className='flex gap-x-2 gap-y-1 flex-wrap'>
-                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white-false'>
                                     English
                                 </span>
-                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white-false'>
                                     FirstPlayThrough
                                 </span>
                             </div>
@@ -90,20 +90,20 @@ export default function App() {
                     <div className="flex bg-white w-[420px] h-[220px]">
                         <div className='relative w-[65%]'>
                             <img src={Clip6} className='w-full h-full' alt="" />
-                            <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
+                            <span className='bg-red-500 px-1 text-white-false text-sm absolute top-2 left-2 rounded tracking-wider'>
                                 LIVE
                             </span>
                             <div className="flex absolute w-full bottom-2 justify-between px-2">
                                 <div className='flex gap-x-1 items-center'>
-                                    <PiSpeakerLowBold className='text-white' />
-                                    <BsFillPlayFill className='text-white' />
+                                    <PiSpeakerLowBold className='text-white-false' />
+                                    <BsFillPlayFill className='text-white-false' />
                                 </div>
                                 <div className='flex gap-x-1'>
                                     <span className="bg-gray-500 text-xs rounded-full px-2">
                                         360p
                                     </span>
-                                    <AiOutlineSetting className='text-white' />
-                                    <BiFullscreen className='text-white' />
+                                    <AiOutlineSetting className='text-white-false' />
+                                    <BiFullscreen className='text-white-false' />
                                 </div>
                             </div>
                         </div>
@@ -118,10 +118,10 @@ export default function App() {
                                 556 viewers
                             </span>
                             <div className='flex gap-x-2 gap-y-1 flex-wrap'>
-                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white-false'>
                                     English
                                 </span>
-                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white-false'>
                                     FirstPlayThrough
                                 </span>
                             </div>
@@ -135,20 +135,20 @@ export default function App() {
                     <div className="flex bg-white w-[420px] h-[220px]">
                         <div className='relative w-[65%]'>
                             <img src={Clip6} className='w-full h-full' alt="" />
-                            <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
+                            <span className='bg-red-500 px-1 text-white-false text-sm absolute top-2 left-2 rounded tracking-wider'>
                                 LIVE
                             </span>
                             <div className="flex absolute w-full bottom-2 justify-between px-2">
                                 <div className='flex gap-x-1 items-center'>
-                                    <PiSpeakerLowBold className='text-white' />
-                                    <BsFillPlayFill className='text-white' />
+                                    <PiSpeakerLowBold className='text-white-false' />
+                                    <BsFillPlayFill className='text-white-false' />
                                 </div>
                                 <div className='flex gap-x-1'>
                                     <span className="bg-gray-500 text-xs rounded-full px-2">
                                         360p
                                     </span>
-                                    <AiOutlineSetting className='text-white' />
-                                    <BiFullscreen className='text-white' />
+                                    <AiOutlineSetting className='text-white-false' />
+                                    <BiFullscreen className='text-white-false' />
                                 </div>
                             </div>
                         </div>
@@ -163,10 +163,10 @@ export default function App() {
                                 556 viewers
                             </span>
                             <div className='flex gap-x-2 gap-y-1 flex-wrap'>
-                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white-false'>
                                     English
                                 </span>
-                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white-false'>
                                     FirstPlayThrough
                                 </span>
                             </div>
@@ -180,20 +180,20 @@ export default function App() {
                     <div className="flex bg-white w-[420px] h-[220px]">
                         <div className='relative w-[65%]'>
                             <img src={Clip6} className='w-full h-full' alt="" />
-                            <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
+                            <span className='bg-red-500 px-1 text-white-false text-sm absolute top-2 left-2 rounded tracking-wider'>
                                 LIVE
                             </span>
                             <div className="flex absolute w-full bottom-2 justify-between px-2">
                                 <div className='flex gap-x-1 items-center'>
-                                    <PiSpeakerLowBold className='text-white' />
-                                    <BsFillPlayFill className='text-white' />
+                                    <PiSpeakerLowBold className='text-white-false' />
+                                    <BsFillPlayFill className='text-white-false' />
                                 </div>
                                 <div className='flex gap-x-1'>
                                     <span className="bg-gray-500 text-xs rounded-full px-2">
                                         360p
                                     </span>
-                                    <AiOutlineSetting className='text-white' />
-                                    <BiFullscreen className='text-white' />
+                                    <AiOutlineSetting className='text-white-false' />
+                                    <BiFullscreen className='text-white-false' />
                                 </div>
                             </div>
                         </div>
@@ -208,10 +208,10 @@ export default function App() {
                                 556 viewers
                             </span>
                             <div className='flex gap-x-2 gap-y-1 flex-wrap'>
-                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white-false'>
                                     English
                                 </span>
-                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white-false'>
                                     FirstPlayThrough
                                 </span>
                             </div>
@@ -225,20 +225,20 @@ export default function App() {
                     <div className="flex bg-white w-[420px] h-[220px]">
                         <div className='relative w-[65%]'>
                             <img src={Clip6} className='w-full h-full' alt="" />
-                            <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
+                            <span className='bg-red-500 px-1 text-white-false text-sm absolute top-2 left-2 rounded tracking-wider'>
                                 LIVE
                             </span>
                             <div className="flex absolute w-full bottom-2 justify-between px-2">
                                 <div className='flex gap-x-1 items-center'>
-                                    <PiSpeakerLowBold className='text-white' />
-                                    <BsFillPlayFill className='text-white' />
+                                    <PiSpeakerLowBold className='text-white-false' />
+                                    <BsFillPlayFill className='text-white-false' />
                                 </div>
                                 <div className='flex gap-x-1'>
                                     <span className="bg-gray-500 text-xs rounded-full px-2">
                                         360p
                                     </span>
-                                    <AiOutlineSetting className='text-white' />
-                                    <BiFullscreen className='text-white' />
+                                    <AiOutlineSetting className='text-white-false' />
+                                    <BiFullscreen className='text-white-false' />
                                 </div>
                             </div>
                         </div>
@@ -253,10 +253,10 @@ export default function App() {
                                 556 viewers
                             </span>
                             <div className='flex gap-x-2 gap-y-1 flex-wrap'>
-                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white-false'>
                                     English
                                 </span>
-                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white-false'>
                                     FirstPlayThrough
                                 </span>
                             </div>
@@ -270,20 +270,20 @@ export default function App() {
                     <div className="flex bg-white w-[420px] h-[220px]">
                         <div className='relative w-[65%]'>
                             <img src={Clip6} className='w-full h-full' alt="" />
-                            <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
+                            <span className='bg-red-500 px-1 text-white-false text-sm absolute top-2 left-2 rounded tracking-wider'>
                                 LIVE
                             </span>
                             <div className="flex absolute w-full bottom-2 justify-between px-2">
                                 <div className='flex gap-x-1 items-center'>
-                                    <PiSpeakerLowBold className='text-white' />
-                                    <BsFillPlayFill className='text-white' />
+                                    <PiSpeakerLowBold className='text-white-false' />
+                                    <BsFillPlayFill className='text-white-false' />
                                 </div>
                                 <div className='flex gap-x-1'>
                                     <span className="bg-gray-500 text-xs rounded-full px-2">
                                         360p
                                     </span>
-                                    <AiOutlineSetting className='text-white' />
-                                    <BiFullscreen className='text-white' />
+                                    <AiOutlineSetting className='text-white-false' />
+                                    <BiFullscreen className='text-white-false' />
                                 </div>
                             </div>
                         </div>
@@ -298,10 +298,10 @@ export default function App() {
                                 556 viewers
                             </span>
                             <div className='flex gap-x-2 gap-y-1 flex-wrap'>
-                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white-false'>
                                     English
                                 </span>
-                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white-false'>
                                     FirstPlayThrough
                                 </span>
                             </div>
@@ -315,20 +315,20 @@ export default function App() {
                     <div className="flex bg-white w-[420px] h-[220px]">
                         <div className='relative w-[65%]'>
                             <img src={Clip6} className='w-full h-full' alt="" />
-                            <span className='bg-red-500 px-1 text-white text-sm absolute top-2 left-2 rounded tracking-wider'>
+                            <span className='bg-red-500 px-1 text-white-false text-sm absolute top-2 left-2 rounded tracking-wider'>
                                 LIVE
                             </span>
                             <div className="flex absolute w-full bottom-2 justify-between px-2">
                                 <div className='flex gap-x-1 items-center'>
-                                    <PiSpeakerLowBold className='text-white' />
-                                    <BsFillPlayFill className='text-white' />
+                                    <PiSpeakerLowBold className='text-white-false' />
+                                    <BsFillPlayFill className='text-white-false' />
                                 </div>
                                 <div className='flex gap-x-1'>
                                     <span className="bg-gray-500 text-xs rounded-full px-2">
                                         360p
                                     </span>
-                                    <AiOutlineSetting className='text-white' />
-                                    <BiFullscreen className='text-white' />
+                                    <AiOutlineSetting className='text-white-false' />
+                                    <BiFullscreen className='text-white-false' />
                                 </div>
                             </div>
                         </div>
@@ -343,10 +343,10 @@ export default function App() {
                                 556 viewers
                             </span>
                             <div className='flex gap-x-2 gap-y-1 flex-wrap'>
-                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white-false'>
                                     English
                                 </span>
-                                <span className='p-1 bg-gray-500 text-xs rounded text-white'>
+                                <span className='p-1 bg-gray-500 text-xs rounded text-white-false'>
                                     FirstPlayThrough
                                 </span>
                             </div>

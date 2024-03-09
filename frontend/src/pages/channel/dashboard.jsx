@@ -10,7 +10,7 @@ import LineDivider from '../../components/divider'
 const ChannelDashboardPage = () => {
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -20,7 +20,7 @@ const ChannelDashboardPage = () => {
                             <Dashboard />
                         </div>
                         <div className="w-[86%]">
-                            <div className="mt-4 text-white flex justify-between">
+                            <div className="mt-4 text-white-false flex justify-between">
                                 <h1 className="font-bold text-[25px] leading-none">Dashboard</h1>
                                 <div className="flex items-center gap-x-2">
                                     <Button enabled={"Upload Videos"}>Upload Videos</Button>
@@ -39,12 +39,12 @@ const ChannelDashboardPage = () => {
                                     <div className="flex gap-x-3">
                                         <div className="w-[491px] h-[422px] flex justify-center items-center flex-col border border-[#1B1B1B] rounded-[14px]">
                                             <div className="w-[141px] h-[141px]"><img src={playPic} alt="" className="" /></div>
-                                            <p className="text-white text-center">Want to see metrics on your recent video?Upload and publish a video to get started.</p>
+                                            <p className="text-white-false text-center">Want to see metrics on your recent video?Upload and publish a video to get started.</p>
                                             <div className="mt-4">
                                                 <Button enabled={"Dashboard"}>Dashboard</Button>
                                             </div>
                                         </div>
-                                        <div className="text-white p-4 w-[491px] h-[422px] border border-[#1B1B1B] rounded-[14px] flex flex-col">
+                                        <div className="text-white-false p-4 w-[491px] h-[422px] border border-[#1B1B1B] rounded-[14px] flex flex-col">
                                             <div>
                                                 <h1 className="text-[19px] font-bold leading-normal">Channel Analytics</h1>
                                                 <p>Current subscribers</p>
@@ -74,7 +74,7 @@ const ChannelDashboardPage = () => {
                                     </div>
                                 </div>
                                 <div className="w-[40%]">
-                                    <div className="w-full text-white border border-[#1B1B1B] rounded-[14px] p-4">
+                                    <div className="w-full text-white-false border border-[#1B1B1B] rounded-[14px] p-4">
                                         <div>
                                             <h1 className="text-[19px] font-bold leading-normal">News</h1>
                                             <div className="mt-2">

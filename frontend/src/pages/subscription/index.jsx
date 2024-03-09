@@ -29,7 +29,7 @@ const SubscriptionHomePage = () => {
         'Cast'
     ]
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -42,7 +42,7 @@ const SubscriptionHomePage = () => {
                             <div className="flex justify-center items-center">
                                 <img src={blipsIcon} className="w-[52px]" alt="" />
                             </div>
-                            <div className="text-white flex justify-between mt-4 px-1">
+                            <div className="text-white-false flex justify-between mt-4 px-1">
                                 {
                                     categories?.map(item => {
                                         return <span className="">{item}</span>
@@ -54,7 +54,7 @@ const SubscriptionHomePage = () => {
                                 <div>
                                     <img src={gamingHeaderPic} alt="" />
                                 </div>
-                                <div className="mt-4 flex justify-between text-white items-center">
+                                <div className="mt-4 flex justify-between text-white-false items-center">
                                     <div className="flex items-center gap-x-4 ">
                                         <div>
                                             <img src={profilePic} alt="" />
@@ -83,7 +83,7 @@ const SubscriptionHomePage = () => {
                                             </Button>)
                                         }
                                 </div>
-                                <div className="flex justify-between flex-wrap gap-5 text-white mt-8">
+                                <div className="flex justify-between flex-wrap gap-5 text-white-false mt-8">
                                     <div className="w-[232px] flex-col flex gap-y-2">
                                         <div><img src={history1Img} className="w-[232px] h-[135px]" alt="" /></div>
                                         <span className="block text-[13px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry</span>

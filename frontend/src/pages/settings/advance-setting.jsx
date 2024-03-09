@@ -27,7 +27,7 @@ const AdvanceSettingPage = () => {
     ])
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -36,8 +36,8 @@ const AdvanceSettingPage = () => {
                         <div className="!w-[14%]">
                             <Dashboard isSettingDashboard={true} />
                         </div>
-                        <div className="w-[86%] text-white">
-                            <h1 className="font-semibold text-[25px] mt-4 text-white leading-none">Advanced setting</h1>
+                        <div className="w-[86%] text-white-false">
+                            <h1 className="font-semibold text-[25px] mt-4 text-white-false leading-none">Advanced setting</h1>
                             <p className="text-[15px] font-bold mt-12">Set up Khrysalis exactly how you want it</p>
 
                             <LineDivider />

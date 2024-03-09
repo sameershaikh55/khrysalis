@@ -5,13 +5,13 @@ const Tabs = () => {
         {
             label: 'Taha',
             key: 0,
-            children: <div dangerouslySetInnerHTML={{ __html: '<h1 classname="!text-3xl text-white"> This is HTML content</h1>' }}></div>
+            children: <div dangerouslySetInnerHTML={{ __html: '<h1 classname="!text-3xl text-white-false"> This is HTML content</h1>' }}></div>
         }
     ]
     return (
         <>
             <AntdTabs
-                className='!text-white'
+                className='!text-white-false'
                 tabPosition={'left'}
                 items={items}
             />

@@ -11,7 +11,7 @@ const FollowersPage = () => {
 
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -21,7 +21,7 @@ const FollowersPage = () => {
                             <Dashboard />
                         </div>
                         <div className="w-[86%]">
-                            <div className="text-white py-2">
+                            <div className="text-white-false py-2">
                                 <div className="flex justify-between items-center">
                                     <h1 className="text-[19px] font-bold leading-normal">Gaming Masters Pro</h1>
                                     <IoMdClose className="text-[20px]" />
@@ -116,7 +116,7 @@ const FollowersPage = () => {
                                 </div>
                             </div>
                             <LineDivider/>
-                            <div className="text-white py-2">
+                            <div className="text-white-false py-2">
                                 <div className="flex justify-between items-center">
                                     <h1 className="text-[19px] font-bold leading-normal">Gaming Masters Pro</h1>
                                     {/* <IoMdClose className="text-[20px]" /> */}

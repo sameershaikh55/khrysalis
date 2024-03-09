@@ -14,7 +14,7 @@ const LibraryPage = () => {
     ]
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -24,7 +24,7 @@ const LibraryPage = () => {
                             <Dashboard />
                         </div>
                         <div className="w-[86%]">
-                            <div className="flex text-white gap-x-3">
+                            <div className="flex text-white-false gap-x-3">
                                 <div className="w-4/5">
                                     <span className="gap-x-2 flex items-center mt-2">
                                         <img src={historyIcon} alt="" />

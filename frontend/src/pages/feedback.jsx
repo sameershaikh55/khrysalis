@@ -10,7 +10,7 @@ import searchIcon from '../assets/icons/search.png'
 const FeedbackPage = () => {
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -19,9 +19,9 @@ const FeedbackPage = () => {
                         <div className="!w-[14%]">
                             <Dashboard isSettingDashboard={true} />
                         </div>
-                        <div className="w-[86%] text-white">
+                        <div className="w-[86%] text-white-false">
                             <div className="flex justify-between items-center mt-4">
-                                <h1 className="font-semibold text-[25px] text-white leading-none">Feedbacks</h1>
+                                <h1 className="font-semibold text-[25px] text-white-false leading-none">Feedbacks</h1>
                                 <div className="w-[324px] border border-[#3B3B3B] rounded-[100px] px-2 gap-x-2 flex items-center h-[46px]">
                                     <input type="text" className="bg-transparent w-full border-none outline-none" name="" placeholder="Search Here..." id="" />
                                     <img src={searchIcon} alt="" />

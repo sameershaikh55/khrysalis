@@ -1,3 +1,9 @@
+import { useState, useEffect } from "react";
+import { useContext } from "react";
+import MyContext from "../../router/context";
+
+
+
 const CalenderSvg = ({ width, height }) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 11 11" fill="none">
@@ -57,8 +63,64 @@ const Reaction = ({ width, height }) => {
         </svg>
     )
 }
+const ThumbsUp = ({ width, height }) => {
+    const { data, updateData } = useContext(MyContext);
+    const [isDarkMode, setIsDarkMode] = useState(data.isDarkMode)
+    useEffect(() => {
+        setIsDarkMode(data?.isDarkMode)
+    }, [data?.isDarkMode])
+    return (
+        <svg width={width} height={height} viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.09058 15.1457L7.57695 17.3079C7.89777 17.6682 8.61962 17.8484 9.10085 17.8484H12.1486C13.1111 17.8484 14.1538 17.0376 14.3944 15.9565L16.3193 9.38008C16.7203 8.11884 15.9985 7.03775 14.7954 7.03775H11.5872C11.106 7.03775 10.705 6.58731 10.7852 5.95669L11.1862 3.07385C11.3466 2.26306 10.8654 1.36217 10.1435 1.09191C9.50187 0.821642 8.69982 1.182 8.379 1.72253L5.09058 7.21792" stroke={isDarkMode ? 'white' : 'black'} stroke-miterlimit="10" />
+            <path d="M1 15.1458V6.31715C1 5.05591 1.48123 4.60547 2.6041 4.60547H3.40615C4.52903 4.60547 5.01026 5.05591 5.01026 6.31715V15.1458C5.01026 16.407 4.52903 16.8575 3.40615 16.8575H2.6041C1.48123 16.8575 1 16.407 1 15.1458Z" stroke={isDarkMode ? 'white' : 'black'} stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+    )
+}
+
+const ThumbsDown = ({ width, height }) => {
+    const { data, updateData } = useContext(MyContext);
+    const [isDarkMode, setIsDarkMode] = useState(data.isDarkMode)
+    useEffect(() => {
+        setIsDarkMode(data?.isDarkMode)
+    }, [data?.isDarkMode])
+    return (
+        <svg width={width} height={height} viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.9094 3.70265L9.42305 1.54053C9.10223 1.18017 8.38038 0.999994 7.89915 0.999994L4.85136 0.999994C3.8889 0.999994 2.84623 1.81079 2.60562 2.89185L0.680693 9.46831C0.279667 10.7296 1.00151 11.8106 2.20459 11.8106L5.41279 11.8106C5.89402 11.8106 6.29505 12.2611 6.21484 12.8917L5.81382 15.7745C5.65341 16.5853 6.13464 17.4862 6.85649 17.7565C7.49813 18.0267 8.30018 17.6664 8.621 17.1259L11.9094 11.6305" stroke={isDarkMode ? 'white' : 'black'} stroke-miterlimit="10" />
+            <path d="M16 3.70258L16 12.5312C16 13.7925 15.5188 14.2429 14.3959 14.2429L13.5938 14.2429C12.471 14.2429 11.9897 13.7925 11.9897 12.5312L11.9897 3.70258C11.9897 2.44135 12.471 1.9909 13.5938 1.9909L14.3959 1.9909C15.5188 1.9909 16 2.44135 16 3.70258Z" stroke={isDarkMode ? 'white' : 'black'} stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+const Comments = ({ width, height }) => {
+    const { data, updateData } = useContext(MyContext);
+    const [isDarkMode, setIsDarkMode] = useState(data.isDarkMode)
+    useEffect(() => {
+        setIsDarkMode(data?.isDarkMode)
+    }, [data?.isDarkMode])
+    return (
+        <svg width={width} height={height} viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.571289 1V12.1429H6.14272L7.99986 14L9.857 12.1429H15.4284V1H0.571289Z" stroke={isDarkMode ? 'white' : 'black'} stroke-miterlimit="10" />
+            <path d="M3.6665 4.09521H12.3332" stroke={isDarkMode ? 'white' : 'black'} stroke-miterlimit="10" />
+            <path d="M3.6665 6.57153H12.3332" stroke={isDarkMode ? 'white' : 'black'} stroke-miterlimit="10" />
+            <path d="M3.6665 9.04761H9.85698" stroke={isDarkMode ? 'white' : 'black'} stroke-miterlimit="10" />
+        </svg>
+    )
+}
+const Share = ({ width, height }) => {
+    const { data, updateData } = useContext(MyContext);
+    const [isDarkMode, setIsDarkMode] = useState(data.isDarkMode)
+    useEffect(() => {
+        setIsDarkMode(data?.isDarkMode)
+    }, [data?.isDarkMode])
+    return (
+        <svg width={width} height={height} viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.8383 19.0064H1.45127e-05V8.68485C-0.0016711 7.97976 0.1435 7.28401 0.423927 6.65319C0.804667 5.70946 1.41926 4.90881 2.19427 4.3469C2.96928 3.785 3.87193 3.48561 4.79437 3.48451H9.60836V0H11.1017L16.8729 6.48237L11.0812 12.9877H9.60836V9.5032H6.4775C5.82262 9.50499 5.18611 9.74658 4.66449 10.1914C4.14288 10.6361 3.76461 11.2598 3.58704 11.9678L1.8383 19.0064ZM4.79437 4.7516C4.08731 4.75245 3.39549 4.98245 2.80193 5.414C2.20837 5.84556 1.73828 6.46032 1.44809 7.18454L1.43779 7.20885C1.23286 7.66673 1.12676 8.17237 1.1281 8.68485V17.151L2.50048 11.6273C2.74478 10.6531 3.26524 9.79492 3.98294 9.18294C4.70064 8.57097 5.57643 8.23855 6.4775 8.2361H10.7364V11.583L15.2775 6.48237L10.7364 1.38169V4.7516H4.79437Z" fill={isDarkMode ? 'white' : 'black'} />
+        </svg>
+
+    )
+}
 
 
 
 
-export { CalenderSvg, UserAdminSvg, VerifiedTick, Hamburger, AddUser, Reaction }
+export { CalenderSvg, UserAdminSvg, VerifiedTick, Hamburger, AddUser, Reaction, ThumbsUp, ThumbsDown, Comments, Share }

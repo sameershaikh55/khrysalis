@@ -8,7 +8,7 @@ import LineDivivder from '../components/divider'
 const TrendingPage = () => {
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -17,8 +17,8 @@ const TrendingPage = () => {
                         <div className="!w-[14%]">
                             <Dashboard />
                         </div>
-                        <div className="w-[86%] text-white">
-                            <h1 className="font-semibold text-[25px] mt-4 text-white leading-none">Trending</h1>
+                        <div className="w-[86%] text-white-false">
+                            <h1 className="font-semibold text-[25px] mt-4 text-white-false leading-none">Trending</h1>
 
                             <div className="mt-12">
                                 <div>

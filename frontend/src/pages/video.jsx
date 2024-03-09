@@ -29,7 +29,7 @@ const VideoPage = () => {
         'Cast'
     ]
     return (
-        <div className="bg-black pb-20 min-h-screen text-white">
+        <div className="bg-black-false pb-20 min-h-screen text-white-false">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -42,7 +42,7 @@ const VideoPage = () => {
                             <div className="flex justify-center items-center">
                                 <img src={blipsIcon} className="w-[52px]" alt="" />
                             </div>
-                            <div className="text-white flex justify-between mt-4 px-1">
+                            <div className="text-white-false flex justify-between mt-4 px-1">
                                 {
                                     categories?.map(item => {
                                         return <span className="">{item}</span>

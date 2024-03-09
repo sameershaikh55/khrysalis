@@ -8,7 +8,7 @@ import { channelTabs as tabs } from "../../conts"
 const ChannelSubtitlesPage = () => {
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -17,17 +17,17 @@ const ChannelSubtitlesPage = () => {
                         <div className="!w-[14%]">
                             <Dashboard />
                         </div>
-                        <div className="w-[86%] text-white">
+                        <div className="w-[86%] text-white-false">
                             <div className="flex gap-3 flex-wrap justify-center items-center mt-2">
                                 {
                                     tabs?.map((val, index) => <Button key={index} enabled={"Subtitles"} path={val?.path}>{val?.title}</Button>)
                                 }
                             </div>
-                            <div className="mt-4 text-white">
+                            <div className="mt-4 text-white-false">
                                 <h1 className="font-bold text-[25px] leading-none">Subtitles</h1>
                             </div>
 
-                            <div className="flex items-center gap-4 text-white border-y border-white border-opacity-10 py-2 mt-6">
+                            <div className="flex items-center gap-4 text-white-false border-y border-white border-opacity-10 py-2 mt-6">
                                 <Link to={""} className="text-[18px] font-semibold leading-normal p-2">All</Link>
                                 <Link to={""} className="text-[18px] font-semibold leading-normal p-2">Drafts</Link>
                                 <Link to={""} className="text-[18px] font-semibold leading-normal p-2">Published</Link>

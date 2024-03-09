@@ -15,7 +15,7 @@ const LikedPage = () => {
     ]
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -25,7 +25,7 @@ const LikedPage = () => {
                             <Dashboard />
                         </div>
                         <div className="w-[86%]">
-                            <div className="flex text-white gap-x-10 mt-4">
+                            <div className="flex text-white-false gap-x-10 mt-4">
                                 <div className="w-[232px]">
                                     <div>
                                         <img src={liked1} alt="liked" className="w-[232px] h-[135px]" />

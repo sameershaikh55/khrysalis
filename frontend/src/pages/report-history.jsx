@@ -6,7 +6,7 @@ import LineDivider from '../components/divider'
 const ReportHistoryPage = () => {
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -16,11 +16,11 @@ const ReportHistoryPage = () => {
                             <Dashboard />
                         </div>
                         <div className="w-[86%]">
-                            <h1 className="text-[25px] font-bold leading-normal text-white mt-4">
+                            <h1 className="text-[25px] font-bold leading-normal text-white-false mt-4">
                                 Thanksk for reporting
                             </h1>
 
-                            <div className="text-white mt-14">
+                            <div className="text-white-false mt-14">
                                 <h2 className="text-[15px] font-bold">
                                     Account
                                 </h2>
@@ -36,7 +36,7 @@ const ReportHistoryPage = () => {
 
                             <LineDivider/>
 
-                            <div className="mt-6 text-white">
+                            <div className="mt-6 text-white-false">
                                 <p className="text-[13px]">All</p>
 
                                 <div className="mt-4">

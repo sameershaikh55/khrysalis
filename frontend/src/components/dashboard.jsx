@@ -1,3 +1,11 @@
+
+import { Link } from 'react-router-dom'
+import MyContext from '../router/context'
+import { useContext } from 'react'
+import { useState, useEffect } from 'react'
+
+
+// For Dark Mode mode Icons
 import home from '../assets/icons/home.png'
 import blips from '../assets/icons/blips.png'
 import followers from '../assets/icons/followers.png'
@@ -12,9 +20,28 @@ import setting from '../assets/icons/setting.png'
 import help from '../assets/icons/help.png'
 import feedback from '../assets/icons/feedback.png'
 import hamburger from '../assets/icons/hamburger.png'
-import { Link } from 'react-router-dom'
+
+// For Bright Mode mode Icons
+import homeDark from '../assets/icons/home-dark.png'
+import blipsDark from '../assets/icons/blips-dark.png'
+import followersDark from '../assets/icons/followers-dark.png'
+import libraryDark from '../assets/icons/library-dark.png'
+import historyDark from '../assets/icons/history-dark.png'
+import likedDark from '../assets/icons/thumbsup-dark.png'
+import trendingDark from '../assets/icons/trending-dark.png'
+import musicDark from '../assets/icons/music-dark.png'
+import gamingDark from '../assets/icons/gaming-dark.png'
+import newsDark from '../assets/icons/news-dark.png'
+import settingDark from '../assets/icons/settings-dark.png'
+import helpDark from '../assets/icons/help-dark.png'
+import feedbackDark from '../assets/icons/help-2-dark.png'
 
 const Dashboard = ({ isSettingDashboard }) => {
+
+    const { data, updateData } = useContext(MyContext);
+    const [isDarkMode, setIsDarkMode] = useState(data.isDarkMode)
+
+
     const items = [
         [
             {
@@ -22,60 +49,61 @@ const Dashboard = ({ isSettingDashboard }) => {
             },
             {
                 title: "home",
-                icon: home,
+                icon: isDarkMode ? home : homeDark,
                 path: "/"
             }, {
                 title: "blips",
-                icon: blips
+                icon: isDarkMode ? blips : blipsDark,
+                path: '/blips'
             }, {
                 title: "followers",
-                icon: followers,
+                icon: isDarkMode ? followers : followersDark,
                 path: "/followers"
             }, {
                 title: "library",
-                icon: library,
+                icon: isDarkMode ? library : libraryDark,
                 path: "/library",
             }, {
                 title: "history",
-                icon: history,
+                icon: isDarkMode ? history : historyDark,
                 path: "/history"
             }, {
                 title: "liked",
-                icon: liked,
+                icon: isDarkMode ? liked : likedDark,
                 path: "/liked"
             }, {
                 title: "trending",
-                icon: trending,
+                icon: isDarkMode ? trending : trendingDark,
                 path: "/trending"
             }, {
                 title: "music",
-                icon: music,
+                icon: isDarkMode ? music : musicDark,
                 path: "/music"
             }, {
                 title: "gaming",
-                icon: gaming,
+                icon: isDarkMode ? gaming : gamingDark,
                 path: "/gaming"
             }, {
                 title: "news",
-                icon: news,
+                icon: isDarkMode ? news : newsDark,
                 path: "/news"
             }
         ], [
             {
                 title: "settings",
-                icon: setting,
+                icon: isDarkMode ? setting : settingDark,
                 path: "/settings/account"
             }, {
                 title: "report history",
-                icon: history,
+                icon: isDarkMode ? history : historyDark,
                 path: "/report-history"
             }, {
                 title: "help",
-                icon: help,
+                icon: isDarkMode ? help : helpDark,
                 path: "/help-notification"
             }, {
                 title: "send feedback",
-                icon: feedback,
+                icon: isDarkMode ? feedback : feedbackDark,
                 path: "/feedback"
             }
         ]
@@ -116,18 +144,22 @@ const Dashboard = ({ isSettingDashboard }) => {
         }
     ]
 
+    useEffect(() => {
+        setIsDarkMode(data?.isDarkMode)
+    }, [data?.isDarkMode])
+
     return (
         <div className="flex flex-col w-[12%] fixed h-[90vh] pt-4 top-[60px]">
             {/* <div className="flex flex-col justify-between"> */}
             {
                 !isSettingDashboard && items?.map((val, index) => {
                     return (
-                        <div className={`text-white ${index == 1 && 'mt-6'}`} >
+                        <div className={`text-white-false ${index == 1 && 'mt-6'}`} >
                             {
                                 val?.map((val, index) => {
                                     return (
                                         <div key={val} className='flex flex-col'>
-                                            <Link key={val} to={val?.path} className='flex gap-x-2 text-white py-[6px] items-center text-sm hover:text-transparent bg-clip-text bg-gradient-to-r from-[#00E9EE] via-[#5194EC] to-[#D414EE]'>
+                                            <Link key={val} to={val?.path} className='flex gap-x-2 text-white-false py-[6px] items-center text-sm hover:text-transparent bg-clip-text bg-gradient-to-r from-[#00E9EE] via-[#5194EC] to-[#D414EE]'>
                                                 <img src={val.icon} alt="" className='w-4' />
                                                 <span>{val?.title}</span>
                                             </Link>
@@ -142,9 +174,9 @@ const Dashboard = ({ isSettingDashboard }) => {
             {
                 isSettingDashboard && settingItems?.map((val, index) => {
                     return (
-                        <div className='text-white' key={val}>
+                        <div className='text-white-false' key={val}>
                             <div className='flex flex-col'>
-                                <Link key={val} to={val?.path} className='flex gap-x-2 text-white py-[6px] items-center text-sm hover:text-transparent bg-clip-text bg-gradient-to-r from-[#00E9EE] via-[#5194EC] to-[#D414EE]'>
+                                <Link key={val} to={val?.path} className='flex gap-x-2 text-white-false py-[6px] items-center text-sm hover:text-transparent bg-clip-text bg-gradient-to-r from-[#00E9EE] via-[#5194EC] to-[#D414EE]'>
                                     <span>{val?.title}</span>
                                 </Link>
                             </div>

@@ -56,7 +56,7 @@ const StorePage = () => {
     ]
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -66,14 +66,14 @@ const StorePage = () => {
                             <Dashboard />
                         </div>
                         <div className="w-[86%]">
-                            <h1 className="text-[25px] font-bold leading-normal text-white mt-4">
+                            <h1 className="text-[25px] font-bold leading-normal text-white-false mt-4">
                                 Store
                             </h1>
                             <div className="mt-4 flex justify-between gap-4 flex-wrap">
                                 {
                                     products?.map((val, index) => {
                                         return (
-                                            <Link to={{pathname: '/product/details', search: val?.img}} key={index} className="w-[228px] block h-[320px] text-white">
+                                            <Link to={{pathname: '/product/details', search: val?.img}} key={index} className="w-[228px] block h-[320px] text-white-false">
                                                 <div className="h-[236px]">
                                                     <img src={val?.img} className="h-full w-full" alt="" />
                                                 </div>

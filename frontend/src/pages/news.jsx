@@ -12,7 +12,7 @@ import LineDivider from '../components/divider'
 const NewsPage = () => {
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -22,12 +22,12 @@ const NewsPage = () => {
                             <Dashboard />
                         </div>
                         <div className="w-[86%]">
-                            <div className="mt-4 text-white">
+                            <div className="mt-4 text-white-false">
                                 <div>
                                     <h1 className="font-semibold text-[25px] leading-none">Live News</h1>
                                     <span className="text-[10px]">93.7M subscribers</span>
                                 </div>
-                                <div className="flex justify-between flex-wrap gap-5 text-white mt-8">
+                                <div className="flex justify-between flex-wrap gap-5 text-white-false mt-8">
                                     <div className="w-[232px] flex-col flex gap-y-2">
                                         <div><img src={history1Img} className="w-[232px] h-[135px]" alt="" /></div>
                                         <span className="block text-[13px] font-bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry</span>
@@ -49,7 +49,7 @@ const NewsPage = () => {
 
                             <LineDivider/>
 
-                            <div className="mt-4 text-white">
+                            <div className="mt-4 text-white-false">
                                 <div>
                                     <h1 className="font-semibold text-[25px] leading-none">Regular News</h1>
                                 </div>

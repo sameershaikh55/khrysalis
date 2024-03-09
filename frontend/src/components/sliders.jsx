@@ -37,14 +37,14 @@ export default function Slider(props) {
                                             <img src={playIcon} alt="" className='z-10' />
                                         </div>}
                                         {!props?.blips && !props?.liveNews && <div className='absolute w-full h-full'>
-                                            <span className='bg-black text-white block rounded-full float-right py-1 px-3 text-xs mr-3 mt-3'>
+                                            <span className='bg-black-false text-white-false block rounded-full float-right py-1 px-3 text-xs mr-3 mt-3'>
                                                 {val?.duration}
                                             </span>
                                             <div className='absolute bottom-2 flex flex-col ml-3    '>
-                                                <span className='bg-black w-fit text-white block rounded-full float-right py-1 px-3 text-xs mr-3 mt-3'>
+                                                <span className='bg-black-false w-fit text-white-false block rounded-full float-right py-1 px-3 text-xs mr-3 mt-3'>
                                                     {val?.category}
                                                 </span>
-                                                <h1 className='text-white font-semibold pl-2'>
+                                                <h1 className='text-white-false font-semibold pl-2'>
                                                     The best game of all time
                                                 </h1>
                                                 <div className="flex items-center gap-x-1 pl-2">

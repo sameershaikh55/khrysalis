@@ -11,7 +11,7 @@ const ChannelCustomizationPage = () => {
     const [isVideoSpotLight, setIsVideoSpotlight] = useState(true)
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -20,7 +20,7 @@ const ChannelCustomizationPage = () => {
                         <div className="!w-[14%]">
                             <Dashboard />
                         </div>
-                        <div className="w-[86%] text-white">
+                        <div className="w-[86%] text-white-false">
                             <div className="flex gap-3 flex-wrap justify-center items-center mt-2">
                                 {
                                     tabs?.map((val, index) => <Button key={index} enabled={"Customization"} path={val?.path}>{val?.title}</Button>)
@@ -31,7 +31,7 @@ const ChannelCustomizationPage = () => {
                             </div>
 
                             {/* <LineDivider/> */}
-                            <div className="flex items-center gap-4 text-white border-y border-white border-opacity-10 py-2 mt-6">
+                            <div className="flex items-center gap-4 text-white-false border-y border-white border-opacity-10 py-2 mt-6">
                                 <Link to={""} className="text-[18px] font-semibold leading-normal p-2">Layout</Link>
                                 <Link to={""} className="text-[18px] font-semibold leading-normal p-2">Branding</Link>
                                 <Link to={""} className="text-[18px] font-semibold leading-normal p-2">Basic info</Link>

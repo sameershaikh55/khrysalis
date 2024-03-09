@@ -9,7 +9,7 @@ const ChannelCopyrightPage = () => {
 
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -18,13 +18,13 @@ const ChannelCopyrightPage = () => {
                         <div className="!w-[14%]">
                             <Dashboard />
                         </div>
-                        <div className="w-[86%] text-white">
+                        <div className="w-[86%] text-white-false">
                             <div className="flex gap-3 flex-wrap justify-center items-center mt-2">
                                 {
                                     tabs?.map((val, index) => <Button key={index} enabled={"Copyrights"} path={val?.path}>{val?.title}</Button>)
                                 }
                             </div>
-                            <div className="mt-4 text-white">
+                            <div className="mt-4 text-white-false">
                                 <h1 className="font-bold text-[25px] leading-none">Channel copyright</h1>
                             </div>
 

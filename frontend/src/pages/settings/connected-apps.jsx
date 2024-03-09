@@ -42,7 +42,7 @@ const ConnectedAppsPage = () => {
     ])
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -51,9 +51,9 @@ const ConnectedAppsPage = () => {
                         <div className="!w-[14%]">
                             <Dashboard isSettingDashboard={true} />
                         </div>
-                        <div className="w-[86%] text-white">
+                        <div className="w-[86%] text-white-false">
                             <div className="mt-4">
-                                <div className="mt-4 flex justify-between text-white items-center">
+                                <div className="mt-4 flex justify-between text-white-false items-center">
                                     <h1 className="font-bold text-[25px]">Connected apps</h1>
                                 </div>
                                 <div className="mt-6">

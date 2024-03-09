@@ -6,7 +6,7 @@ import productImg from '../assets/images/store-7.png'
 const ProductDetailsPage = () => {
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -16,7 +16,7 @@ const ProductDetailsPage = () => {
                             <Dashboard />
                         </div>
                         <div className="w-[86%]">
-                            <div className="mt-4 text-white">
+                            <div className="mt-4 text-white-false">
                                 <div className="flex justify-between">
                                     <h1 className="font-semibold text-[25px] leading-none">Store</h1>
                                     <div className="flex gap-x-1 items-center text-base">
@@ -26,7 +26,7 @@ const ProductDetailsPage = () => {
                                 </div>
                             </div>
 
-                            <div className="mt-8 flex justify-between items-center text-white">
+                            <div className="mt-8 flex justify-between items-center text-white-false">
                                 <div className="w-1/2">
                                     <div className="h-[342px] bg-[#070707] flex justify-center items-center">
                                         <img src={productImg} alt="" className="w-[320px] h-[320px]" />

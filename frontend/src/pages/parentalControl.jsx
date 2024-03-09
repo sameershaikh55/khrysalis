@@ -6,7 +6,7 @@ import LineDivider from '../components/divider'
 const ParentalControlPage = () => {
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -15,8 +15,8 @@ const ParentalControlPage = () => {
                         <div className="!w-[14%]">
                             <Dashboard isSettingDashboard={true} />
                         </div>
-                        <div className="w-[86%] text-white">
-                            <h1 className="font-semibold text-[25px] mt-4 text-white leading-none">Parental control</h1>
+                        <div className="w-[86%] text-white-false">
+                            <h1 className="font-semibold text-[25px] mt-4 text-white-false leading-none">Parental control</h1>
 
                             <div className="mt-12">
                                 <p className="text-[15px] font-bold">Set up parental controls</p>

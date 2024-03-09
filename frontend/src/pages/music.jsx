@@ -5,7 +5,7 @@ import liked1 from '../assets/images/liked-1.png'
 const MusicPage = () => {
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-">
@@ -15,8 +15,8 @@ const MusicPage = () => {
                             <Dashboard />
                         </div>
                         <div className="w-[86%]">
-                            <h1 className="text-[25px] font-bold text-white mt-2 mb-6">Music</h1>
-                            <div className="flex gap-8 justify-between flex-wrap text-white">
+                            <h1 className="text-[25px] font-bold text-white-false mt-2 mb-6">Music</h1>
+                            <div className="flex gap-8 justify-between flex-wrap text-white-false">
                                 <div className="flex items-center gap-x-4">
                                     <div className="w-[223px] h-[135px]"><img src={liked1} className="w-full h-full" alt="" /></div>
                                     <div className="flex flex-col gap-y-2 h-fit py-2 w-[220px]">

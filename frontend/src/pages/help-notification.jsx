@@ -8,7 +8,7 @@ import { Collapse } from "antd"
 const HelpNotificationPage = () => {
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -17,9 +17,9 @@ const HelpNotificationPage = () => {
                         <div className="!w-[14%]">
                             <Dashboard isSettingDashboard={true} />
                         </div>
-                        <div className="w-[86%] text-white">
+                        <div className="w-[86%] text-white-false">
                             <div className="flex justify-between items-center mt-4">
-                                <h1 className="font-semibold text-[25px] text-white leading-none">Help Notification</h1>
+                                <h1 className="font-semibold text-[25px] text-white-false leading-none">Help Notification</h1>
                                 <div className="w-[324px] border border-[#3B3B3B] rounded-[100px] px-2 gap-x-2 flex items-center h-[46px]">
                                     <input type="text" className="bg-transparent w-full border-none outline-none" name="" placeholder="Search Here..." id="" />
                                     <img src={searchIcon} alt="" />
@@ -57,8 +57,8 @@ const HelpNotificationPage = () => {
                                 <Collapse className="border-0">
                                     {[1, 2, 3, 4].map(() => {
                                         return (
-                                            <Collapse.Panel className="!bg-[#070707] mt-2 border-0" header={<div className="!text-white flex justify-between items-center w-full"><p>Learn about NFL Sunday Ticket on khrysalis & khrysalis TV Lorem ipsum</p><span>-</span></div>} >
-                                                <p className="text-white bg-black border-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus iusto aliquam magnam ad laudantium, saepe accusantium quisquam laboriosam nihil consequuntur eaque officiis perferendis rem placeat, dolores explicabo. Incidunt, debitis similique!</p>
+                                            <Collapse.Panel className="!bg-[#070707] mt-2 border-0" header={<div className="!text-white-false flex justify-between items-center w-full"><p>Learn about NFL Sunday Ticket on khrysalis & khrysalis TV Lorem ipsum</p><span>-</span></div>} >
+                                                <p className="text-white-false bg-black-false border-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus iusto aliquam magnam ad laudantium, saepe accusantium quisquam laboriosam nihil consequuntur eaque officiis perferendis rem placeat, dolores explicabo. Incidunt, debitis similique!</p>
                                             </Collapse.Panel>
                                         )
                                     })}

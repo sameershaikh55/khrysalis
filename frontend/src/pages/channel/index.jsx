@@ -11,7 +11,7 @@ import LineDivider from '../../components/divider'
 const ChannelMainPage = () => {
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -22,7 +22,7 @@ const ChannelMainPage = () => {
                         </div>
                         <div className="w-[86%]">
                             <div className="mt-4">
-                                <div className="mt-4 flex justify-between text-white items-center">
+                                <div className="mt-4 flex justify-between text-white-false items-center">
                                     <div className="flex items-center gap-x-4 ">
                                         <div>
                                             <img src={profilePic} alt="" />
@@ -57,7 +57,7 @@ const ChannelMainPage = () => {
 
                             <LineDivider/>
 
-                            <p className="text-white">This channel doesn't feature any other channels.</p>
+                            <p className="text-white-false">This channel doesn't feature any other channels.</p>
 
                         </div>
                     </div>

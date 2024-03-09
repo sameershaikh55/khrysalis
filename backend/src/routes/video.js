@@ -21,7 +21,8 @@ const {
 // ROUTES
 router
   .route("/")
-  .get(authentication, allVideos)
+  .get(allVideos)
+  // .get(authentication, allVideos)
   .post(authentication, createVideo);
 
 router.route("/channel-videos/:id").get(authentication, allChannelVideos);

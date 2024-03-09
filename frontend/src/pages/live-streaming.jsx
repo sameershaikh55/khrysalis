@@ -28,7 +28,7 @@ const LiveStreamPage = () => {
         'Cast'
     ]
     return (
-        <div className="bg-black pb-20 min-h-screen text-white">
+        <div className="bg-black-false pb-20 min-h-screen text-white-false">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -41,7 +41,7 @@ const LiveStreamPage = () => {
                             <div className="flex justify-center items-center">
                                 <img src={blipsIcon} className="w-[52px]" alt="" />
                             </div>
-                            <div className="text-white flex justify-between mt-4 px-1">
+                            <div className="text-white-false flex justify-between mt-4 px-1">
                                 {
                                     categories?.map(item => {
                                         return <span className="">{item}</span>
@@ -61,7 +61,7 @@ const LiveStreamPage = () => {
                                         Welcome to chat room
                                     </div>
                                     <div className="absolute bottom-0 w-full flex border border-[#3B3B3B] justify-between p-1">
-                                        <input type="text" name="" placeholder="Welcome to chat room..." className="bg-transparent text-white w-full border-none focus:outline-none focus:ring-transparent" id="" />
+                                        <input type="text" name="" placeholder="Welcome to chat room..." className="bg-transparent text-white-false w-full border-none focus:outline-none focus:ring-transparent" id="" />
                                         <Reaction height={20} width={20} />
                                     </div>
                                 </div>

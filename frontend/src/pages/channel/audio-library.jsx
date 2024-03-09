@@ -8,7 +8,7 @@ import { channelTabs as tabs } from "../../conts"
 const ChannelAudioLibraryPage = () => {
 
     return (
-        <div className="bg-black pb-20 min-h-screen">
+        <div className="bg-black-false pb-20 min-h-screen">
             <div className="max-w-screen-xl m-auto">
                 <Header />
                 <div className="px-4">
@@ -23,18 +23,18 @@ const ChannelAudioLibraryPage = () => {
                                     tabs?.map((val, index) => <Button key={index} enabled={"Audio Library"} path={val?.path}>{val?.title}</Button>)
                                 }
                             </div>
-                            <div className="mt-4 text-white">
+                            <div className="mt-4 text-white-false">
                                 <h1 className="font-bold text-[25px] leading-none">Audio Library</h1>
                             </div>
 
                             {/* <LineDivider/> */}
-                            <div className="flex items-center gap-4 text-white border-y border-white border-opacity-10 py-2 mt-6">
+                            <div className="flex items-center gap-4 text-white-false border-y border-white border-opacity-10 py-2 mt-6">
                                 <Link to={""} className="text-[18px] font-semibold leading-normal p-2">Music</Link>
                                 <Link to={""} className="text-[18px] font-semibold leading-normal p-2">Sound Effects</Link>
                                 <Link to={""} className="text-[18px] font-semibold leading-normal p-2">Starred</Link>
                             </div>
 
-                            {/* <table className="text-white">
+                            {/* <table className="text-white-false">
                                     <thead>
                                         <th></th>
                                         <th>Track Title</th>
@@ -60,7 +60,7 @@ const ChannelAudioLibraryPage = () => {
 
 
                             <div class="relative overflow-x-auto">
-                                <table class="w-full text-sm text-left text-white">
+                                <table class="w-full text-sm text-left text-white-false">
                                     <thead>
                                         <tr>
                                             <th>
