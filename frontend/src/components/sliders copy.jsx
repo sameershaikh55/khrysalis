@@ -7,13 +7,11 @@ import profileBlips from "../assets/icons/blips-profile.png";
 import profile from "../assets/icons/profile.png";
 import adminIcon from "../assets/icons/icon _user_admin.png";
 import calendarImg from "../assets/icons/icon _calendar.png";
-import { useAllVideosQuery } from "../redux/features/video";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
 export default function Slider(props) {
-  const { data: videos, isLoading } = useAllVideosQuery();
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -22,18 +20,16 @@ export default function Slider(props) {
 
   return (
     <>
-      {(isLoading && <div>Loading...</div>) || (
-        <Swiper
-          slidesPerView={props?.blips ? 4 : 4}
-          spaceBetween={30}
-          className="mySwiper relative !w-full flex justify-start mt-4"
-        >
-          {videos.video.map((val, index) => {
-            console.log(val, "val");
-            return (
-              <SwiperSlide className="!bg-transparent relative" key={index}>
-                <Link to={val?._id} className="flex flex-col gap-y-1">
-                  <div className="relative">
+      <Swiper
+        slidesPerView={props?.blips ? 4 : 4}
+        spaceBetween={30}
+        className="mySwiper relative !w-full flex justify-start mt-4"
+      >
+        {data?.map((val, index) => {
+          return (
+            <SwiperSlide className="!bg-transparent relative" key={index}>
+              <a href={val?.link} className="flex flex-col gap-y-1">
+                <div className="relative">
                   {!props?.liveNews && (
                     <div className="w-full h-full flex justify-center items-center absolute">
                       <img src={playIcon} alt="" className="z-10" />
@@ -115,12 +111,11 @@ export default function Slider(props) {
                     </div>
                   </div>
                 )}
-                </Link>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      )}
+              </a>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </>
   );
 }

@@ -27,6 +27,7 @@ const HomePage = () => {
     "Camping",
     "Cast",
   ];
+
   return (
     <div className="bg-black-false pb-20">
       <div className="max-w-screen-xl m-auto">
@@ -140,19 +141,7 @@ const HomePage = () => {
                 <LineDivider />
 
                 <div>
-                  <Slider data={recommendedLinks} details={true} />
-                </div>
-                <div>
-                  <Slider data={recommendedLinks} details={true} />
-                </div>
-                <div>
-                  <Slider data={recommendedLinks} details={true} />
-                </div>
-                <div>
-                  <Slider data={recommendedLinks} details={true} />
-                </div>
-                <div>
-                  <Slider data={recommendedLinks} details={true} />
+                  <Slider details={true} />
                 </div>
               </div>
             </div>

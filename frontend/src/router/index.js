@@ -138,7 +138,7 @@ const AppRouter = () => {
         }
       ></Route>
       <Route
-        path="/video"
+        path="/video/id"
         element={
           <Protected>
             <VideoPage />

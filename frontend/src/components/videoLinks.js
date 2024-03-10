@@ -15,131 +15,126 @@
 // import clip22 from '../images/Clip22.png'
 // import clip23 from '../images/Clip23.png'
 
-import Clip5 from '../assets/images/Clip5.png'
-import gamingPic from '../assets/images/video-3.png'
-import History1Pic from '../assets/images/history-1.png'
-import History2Pic from '../assets/images/history-2.png'
-import History3Pic from '../assets/images/history-3.png'
-import History4Pic from '../assets/images/history-4.png'
+import Clip5 from "../assets/images/Clip5.png";
+import gamingPic from "../assets/images/video-3.png";
+import History1Pic from "../assets/images/history-1.png";
+import History2Pic from "../assets/images/history-2.png";
+import History3Pic from "../assets/images/history-3.png";
+import History4Pic from "../assets/images/history-4.png";
 
 const blipLinks = [
-    {
-        img: Clip5,
-        title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
-        userName: 'Developer',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com'
-
-    },
-    {
-        img: Clip5,
-        title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
-        userName: 'Developer',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com'
-
-    }, {
-        img: Clip5,
-        title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
-        userName: 'Developer',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com'
-
-    }, {
-        img: Clip5,
-        title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
-        userName: 'Developer',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com'
-    }, {
-        img: Clip5,
-        title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
-        userName: 'Developer',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com'
-
-    }
-]
+  {
+    img: Clip5,
+    title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
+    userName: "Developer",
+    timeAgo: "12 days ago",
+    link: "https://www.google.com",
+  },
+  {
+    img: Clip5,
+    title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
+    userName: "Developer",
+    timeAgo: "12 days ago",
+    link: "https://www.google.com",
+  },
+  {
+    img: Clip5,
+    title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
+    userName: "Developer",
+    timeAgo: "12 days ago",
+    link: "https://www.google.com",
+  },
+  {
+    img: Clip5,
+    title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
+    userName: "Developer",
+    timeAgo: "12 days ago",
+    link: "https://www.google.com",
+  },
+  {
+    img: Clip5,
+    title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
+    userName: "Developer",
+    timeAgo: "12 days ago",
+    link: "https://www.google.com",
+  },
+];
 const recommendedLinks = [
-    {
-        img: gamingPic,
-        title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
-        userName: 'Developer',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com',
-        duration : '10:16',
-        category: "Gaming"
-
-    },
-    {
-        img: Clip5,
-        title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
-        userName: 'Developer',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com',
-        duration : '10:16',
-        category: "Makeup"
-
-    }, {
-        img: gamingPic,
-        title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
-        userName: 'Developer',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com',
-        duration : '10:16',
-        category: "Gaming"
-
-    }, {
-        img: Clip5,
-        title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
-        userName: 'Developer',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com',
-        duration : '10:16',
-        category: "Makeup"
-
-    }
-]
+  {
+    img: gamingPic,
+    title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
+    userName: "Developer",
+    timeAgo: "12 days ago",
+    link: "https://www.google.com",
+    duration: "10:16",
+    category: "Gaming",
+  },
+  {
+    img: Clip5,
+    title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
+    userName: "Developer",
+    timeAgo: "12 days ago",
+    link: "https://www.google.com",
+    duration: "10:16",
+    category: "Makeup",
+  },
+  {
+    img: gamingPic,
+    title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
+    userName: "Developer",
+    timeAgo: "12 days ago",
+    link: "https://www.google.com",
+    duration: "10:16",
+    category: "Gaming",
+  },
+  {
+    img: Clip5,
+    title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
+    userName: "Developer",
+    timeAgo: "12 days ago",
+    link: "https://www.google.com",
+    duration: "10:16",
+    category: "Makeup",
+  },
+];
 const LiveNewsLinks = [
-    {
-        img: History1Pic,
-        title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
-        userName: 'Developer',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com',
-        duration : '10:16',
-        category: "Gaming"
-
-    },
-    {
-        img: History2Pic,
-        title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
-        userName: 'Developer',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com',
-        duration : '10:16',
-        category: "Makeup"
-
-    }, {
-        img: History3Pic,
-        title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
-        userName: 'Developer',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com',
-        duration : '10:16',
-        category: "Gaming"
-
-    }, {
-        img: History4Pic,
-        title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
-        userName: 'Developer',
-        timeAgo: '12 days ago',
-        link: 'https://www.google.com',
-        duration : '10:16',
-        category: "Makeup"
-
-    }
-]
+  {
+    img: History1Pic,
+    title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
+    userName: "Developer",
+    timeAgo: "12 days ago",
+    link: "https://www.google.com",
+    duration: "10:16",
+    category: "Gaming",
+  },
+  {
+    img: History2Pic,
+    title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
+    userName: "Developer",
+    timeAgo: "12 days ago",
+    link: "https://www.google.com",
+    duration: "10:16",
+    category: "Makeup",
+  },
+  {
+    img: History3Pic,
+    title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
+    userName: "Developer",
+    timeAgo: "12 days ago",
+    link: "https://www.google.com",
+    duration: "10:16",
+    category: "Gaming",
+  },
+  {
+    img: History4Pic,
+    title: `lorem ipsum dummy text lorem ipsum dummy text lorem ipsum`,
+    userName: "Developer",
+    timeAgo: "12 days ago",
+    link: "https://www.google.com",
+    duration: "10:16",
+    category: "Makeup",
+  },
+];
 
 // const gamingLinks = [
 //     {
@@ -344,7 +339,6 @@ const LiveNewsLinks = [
 //     },
 // ]
 
-
 // export {recommendedLinks, gamingLinks, musicLinks, sportsLinks, blipLinks, musicLinks1, sportsLinks1}
 
-export { blipLinks, recommendedLinks, LiveNewsLinks }
+export { blipLinks, recommendedLinks, LiveNewsLinks };
