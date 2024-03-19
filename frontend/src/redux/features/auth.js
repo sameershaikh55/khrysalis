@@ -4,14 +4,14 @@ import { createApi } from "@reduxjs/toolkit/query/react";
 export const auth = createApi({
   reducerPath: "auth",
   baseQuery: fetchBaseQuery({
-    baseUrl: "api",
+    baseUrl: `/auth`,
     credentials: "include",
   }),
   tagTypes: ["User"],
   endpoints: (builder) => ({
     loginUser: builder.mutation({
       query: (body) => ({
-        url: "/auth/login",
+        url: "/login",
         method: "POST",
         body,
       }),
@@ -19,7 +19,7 @@ export const auth = createApi({
     }),
     registerUser: builder.mutation({
       query: (body) => ({
-        url: "/auth/register",
+        url: "/register",
         method: "POST",
         body,
       }),
@@ -27,13 +27,13 @@ export const auth = createApi({
     }),
     logoutUser: builder.mutation({
       query: () => ({
-        url: "/auth/logout",
+        url: "/logout",
         method: "POST",
       }),
       invalidatesTags: ["User"],
     }),
     getUser: builder.query({
-      query: () => "/auth/user-data",
+      query: () => "/user-data",
       providesTags: ["User"],
     }),
   }),

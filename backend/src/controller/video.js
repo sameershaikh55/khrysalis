@@ -27,7 +27,16 @@ exports.allChannelVideos = catchAsyncErrors(async (req, res, next) => {
 
 // all video
 exports.allVideos = catchAsyncErrors(async (req, res, next) => {
-  const videos = await VideoModel.find();
+  // const videosFind = await VideoModel.find();
+  // for (let i = 0; i < videosFind.length; i++) {
+  //   console.log(videosFind[i].thumbnail);
+  //   if (!videosFind[i].thumbnail) {
+  //     videosFind[i].thumbnail = "65c275eb5dbc808f0aaa709d.jpeg";
+  //     videosFind[i].save();
+  //   }
+  // }
+
+  const videos = await VideoModel.find().populate("channel", "title");
   sendResponse(true, 200, "video", videos, res);
 });
 

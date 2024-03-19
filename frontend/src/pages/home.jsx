@@ -8,6 +8,7 @@ import video3 from "../assets/images/video-3.png";
 import video4 from "../assets/images/video-4.png";
 import profileIcon from "../assets/icons/profile.png";
 import LiveSlider from "../components/liveslider";
+import SlidersBlips from "../components/slidersBlips";
 import Slider from "../components/sliders";
 import { blipLinks, recommendedLinks } from "../components/videoLinks";
 import LineDivider from "../components/divider";
@@ -131,7 +132,7 @@ const HomePage = () => {
                 <LineDivider />
 
                 <div>
-                  <Slider data={blipLinks} blips={true} />
+                  <SlidersBlips data={blipLinks} blips={true} />
                 </div>
               </div>
               <div className="text-white-false mt-5">

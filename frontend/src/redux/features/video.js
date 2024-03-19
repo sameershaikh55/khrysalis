@@ -4,27 +4,24 @@ import { createApi } from "@reduxjs/toolkit/query/react";
 export const video = createApi({
   reducerPath: "video",
   baseQuery: fetchBaseQuery({
-    baseUrl: "api",
+    baseUrl: `/video`,
     credentials: "include",
   }),
   endpoints: (builder) => ({
     allVideos: builder.query({
-      query: () => "/video",
+      query: () => "/",
     }),
-    channelVideos: builder.mutation({
-      query: (body) => ({
-        url: "/auth/register",
-        method: "POST",
-        body,
-      }),
+    videoDetail: builder.query({
+      query: (id) => `/single-video/${id}`,
     }),
-    videoDetail: builder.mutation({
-      query: () => ({
-        url: "/auth/logout",
-        method: "POST",
-      }),
-    }),
+    // channelVideos: builder.mutation({
+    //   query: (body) => ({
+    //     url: "/auth/register",
+    //     method: "POST",
+    //     body,
+    //   }),
+    // }),
   }),
 });
 
-export const { useAllVideosQuery } = video;
+export const { useAllVideosQuery, useVideoDetailQuery } = video;

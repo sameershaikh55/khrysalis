@@ -51,369 +51,87 @@ import Public from "../components/Route/PublicRoute";
 import Protected from "../components/Route/ProtectedRoute";
 
 const AppRouter = () => {
+  const routes = [
+    { path: "/", element: <HomePage /> },
+    { path: "/trending", element: <TrendingPage /> },
+    { path: "/news", element: <NewsPage /> },
+    { path: "/video/:id", element: <VideoPage /> },
+  ];
+
+  const publicRoutes = [
+    { path: "/login", element: <LoginPage /> },
+    { path: "/signup", element: <SignupPage /> },
+  ];
+
+  const protectedRoutes = [
+    { path: "/followers", element: <FollowersPage /> },
+    { path: "/library", element: <LibraryPage /> },
+    { path: "/liked", element: <LikedPage /> },
+    { path: "/music", element: <MusicPage /> },
+    { path: "/gaming", element: <GamingPage /> },
+    { path: "/podcast", element: <PodcastPage /> },
+    { path: "/feedback", element: <FeedbackPage /> },
+    { path: "/copyright", element: <CopyRightPage /> },
+    { path: "/history", element: <HistoryPage /> },
+    { path: "/live-stream", element: <LiveStreamPage /> },
+    { path: "/help-notification", element: <HelpNotificationPage /> },
+    { path: "/channel/main", element: <ChannelMainPage /> },
+    { path: "/channel/dashboard", element: <ChannelDashboardPage /> },
+    { path: "/channel/content", element: <ChannelContentPage /> },
+    { path: "/channel/analytics", element: <ChannelAnalyticsPage /> },
+    {
+      path: "/channel/comments/mentions",
+      element: <ChannelCommentsMentionPage />,
+    },
+    { path: "/channel/subtitles", element: <ChannelSubtitlesPage /> },
+    { path: "/channel/copyrights", element: <ChannelCopyrightPage /> },
+    { path: "/channel/earn", element: <ChannelEarningPage /> },
+    { path: "/channel/customization", element: <ChannelCustomizationPage /> },
+    { path: "/channel/audio-library", element: <ChannelAudioLibraryPage /> },
+    { path: "/subscription", element: <SubscriptionHomePage /> },
+    { path: "/subscription/videos", element: <SubscriptionVideoPage /> },
+    { path: "/subscription/playlist", element: <SubscriptionPlaylistPage /> },
+    { path: "/subscription/community", element: <SubscriptionCommunityPage /> },
+    { path: "/subscription/channels", element: <SubscriptionChannelPage /> },
+    { path: "/subscription/about", element: <SubscriptionAboutPage /> },
+    { path: "/report-history", element: <ReportHistoryPage /> },
+    { path: "/store", element: <StorePage /> },
+    { path: "/fashion&beauty", element: <FashionPage /> },
+    { path: "/sports", element: <SportsPage /> },
+    { path: "/product/details", element: <ProductDetailsPage /> },
+    { path: "/settings/account", element: <SettingsAccountPage /> },
+    { path: "/settings/notifications", element: <SettingsNotificationPage /> },
+    {
+      path: "/settings/performance&playback",
+      element: <PerformanceAndPlaybackPage />,
+    },
+    { path: "/settings/downloads", element: <DownloadsPage /> },
+    { path: "/settings/privacy", element: <PrivacyPage /> },
+    { path: "/settings/connected-apps", element: <ConnectedAppsPage /> },
+    { path: "/settings/billing&payment", element: <BillingsAndPaymentPage /> },
+    { path: "/settings/advance", element: <AdvanceSettingPage /> },
+    { path: "/parental-control", element: <ParentalControlPage /> },
+  ];
+
   return (
     <Routes>
-      <Route path="/" element={<HomePage />}></Route>
-      <Route
-        path="/login"
-        element={
-          <Public>
-            <LoginPage />
-          </Public>
-        }
-      ></Route>
-      <Route
-        path="/signup"
-        element={
-          <Public>
-            <SignupPage />
-          </Public>
-        }
-      ></Route>
-      <Route path="/trending" element={<TrendingPage />}></Route>
-      <Route path="/news" element={<NewsPage />}></Route>
-
-      <Route
-        path="/followers"
-        element={
-          <Protected>
-            <FollowersPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/library"
-        element={
-          <Protected>
-            <LibraryPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/liked"
-        element={
-          <Protected>
-            <LikedPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/music"
-        element={
-          <Protected>
-            <MusicPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/gaming"
-        element={
-          <Protected>
-            <GamingPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/podcast"
-        element={
-          <Protected>
-            <PodcastPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/feedback"
-        element={
-          <Protected>
-            <FeedbackPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/copyright"
-        element={
-          <Protected>
-            <CopyRightPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/video/id"
-        element={
-          <Protected>
-            <VideoPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/history"
-        element={
-          <Protected>
-            <HistoryPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/live-stream"
-        element={
-          <Protected>
-            <LiveStreamPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/help-notification"
-        element={
-          <Protected>
-            <HelpNotificationPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/channel/main"
-        element={
-          <Protected>
-            <ChannelMainPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/channel/dashboard"
-        element={
-          <Protected>
-            <ChannelDashboardPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/channel/content"
-        element={
-          <Protected>
-            <ChannelContentPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/channel/analytics"
-        element={
-          <Protected>
-            <ChannelAnalyticsPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/channel/comments/mentions"
-        element={
-          <Protected>
-            <ChannelCommentsMentionPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/channel/subtitles"
-        element={
-          <Protected>
-            <ChannelSubtitlesPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/channel/copyrights"
-        element={
-          <Protected>
-            <ChannelCopyrightPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/channel/earn"
-        element={
-          <Protected>
-            <ChannelEarningPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/channel/customization"
-        element={
-          <Protected>
-            <ChannelCustomizationPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/channel/audio-library"
-        element={
-          <Protected>
-            <ChannelAudioLibraryPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/subscription"
-        element={
-          <Protected>
-            <SubscriptionHomePage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/subscription/videos"
-        element={
-          <Protected>
-            <SubscriptionVideoPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/subscription/playlist"
-        element={
-          <Protected>
-            <SubscriptionPlaylistPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/subscription/community"
-        element={
-          <Protected>
-            <SubscriptionCommunityPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/subscription/channels"
-        element={
-          <Protected>
-            <SubscriptionChannelPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/subscription/about"
-        element={
-          <Protected>
-            <SubscriptionAboutPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/report-history"
-        element={
-          <Protected>
-            <ReportHistoryPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/store"
-        element={
-          <Protected>
-            <StorePage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/fashion&beauty"
-        element={
-          <Protected>
-            <FashionPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/sports"
-        element={
-          <Protected>
-            <SportsPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/product/details"
-        element={
-          <Protected>
-            <ProductDetailsPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/settings/account"
-        element={
-          <Protected>
-            <SettingsAccountPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/settings/notifications"
-        element={
-          <Protected>
-            <SettingsNotificationPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/settings/performance&playback"
-        element={
-          <Protected>
-            <PerformanceAndPlaybackPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/settings/downloads"
-        element={
-          <Protected>
-            <DownloadsPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/settings/privacy"
-        element={
-          <Protected>
-            <PrivacyPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/settings/connected-apps"
-        element={
-          <Protected>
-            <ConnectedAppsPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/settings/billing&payment"
-        element={
-          <Protected>
-            <BillingsAndPaymentPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/settings/advance"
-        element={
-          <Protected>
-            <AdvanceSettingPage />
-          </Protected>
-        }
-      ></Route>
-      <Route
-        path="/parental-control"
-        element={
-          <Protected>
-            <ParentalControlPage />
-          </Protected>
-        }
-      ></Route>
-      {/* <Route path='/reels' element={
-        <Protected>
-        <ReelsPage />
-        </Protected>
-        }></Route> */}
+      {routes.map((route, index) => (
+        <Route key={index} path={route.path} element={route.element} />
+      ))}
+      {publicRoutes.map((route, index) => (
+        <Route
+          key={index}
+          path={route.path}
+          element={<Public>{route.element}</Public>}
+        />
+      ))}
+      {protectedRoutes.map((route, index) => (
+        <Route
+          key={index}
+          path={route.path}
+          element={<Protected>{route.element}</Protected>}
+        />
+      ))}
     </Routes>
   );
 };
