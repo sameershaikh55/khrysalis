@@ -4,6 +4,7 @@ import { auth } from "./features/auth";
 import { video } from "./features/video";
 import { comment } from "./features/comments";
 import { channel } from "./features/channel";
+import { product } from "./features/product";
 
 export const store = configureStore({
   reducer: {
@@ -11,13 +12,15 @@ export const store = configureStore({
     [video.reducerPath]: video.reducer,
     [comment.reducerPath]: comment.reducer,
     [channel.reducerPath]: channel.reducer,
+    [product.reducerPath]: product.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(
       auth.middleware,
       video.middleware,
       comment.middleware,
-      channel.middleware
+      channel.middleware,
+      product.middleware
     ),
 });
 

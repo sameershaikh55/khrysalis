@@ -22,7 +22,7 @@ router
 
 router
   .route("/:id")
-  .get(authentication, getProductDetails)
+  .get(getProductDetails)
   .put(authentication, upload.single("picture"), updateProduct)
   .delete(authentication, deleteProduct);
 

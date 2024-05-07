@@ -61,6 +61,8 @@ const AppRouter = () => {
   const publicRoutes = [
     { path: "/login", element: <LoginPage /> },
     { path: "/signup", element: <SignupPage /> },
+    { path: "/store", element: <StorePage /> },
+    { path: "/product/details", element: <ProductDetailsPage /> },
   ];
 
   const protectedRoutes = [
@@ -97,10 +99,8 @@ const AppRouter = () => {
     { path: "/subscription/channels", element: <SubscriptionChannelPage /> },
     { path: "/subscription/about", element: <SubscriptionAboutPage /> },
     { path: "/report-history", element: <ReportHistoryPage /> },
-    { path: "/store", element: <StorePage /> },
     { path: "/fashion&beauty", element: <FashionPage /> },
     { path: "/sports", element: <SportsPage /> },
-    { path: "/product/details", element: <ProductDetailsPage /> },
     { path: "/settings/account", element: <SettingsAccountPage /> },
     { path: "/settings/notifications", element: <SettingsNotificationPage /> },
     {
