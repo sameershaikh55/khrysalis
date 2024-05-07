@@ -1,11 +1,10 @@
+import { useState } from "react";
 import Header from "../components/header";
 import blipsIcon from "../assets/icons/blips.png";
 import downloadIcon from "../assets/icons/download.png";
 import shareIcon from "../assets/icons/share.png";
 import likeIcon from "../assets/icons/thumbs-up.png";
-import dislikeIcon from "../assets/icons/thumbs-down.png";
 import Dashboard from "../components/dashboard";
-import VideoImage from "../assets/images/video-thumbnail.png";
 import AdImage from "../assets/images/ad.png";
 import profilePic from "../assets/icons/blips-profile.png";
 import { VerifiedTick } from "../assets/svgs";
@@ -13,14 +12,54 @@ import liked1 from "../assets/images/liked-1.png";
 import Button from "../components/button";
 import LineDivider from "../components/divider";
 import { useParams } from "react-router-dom";
-import { useVideoDetailQuery } from "../redux/features/video";
+import {
+  useLikeVideoMutation,
+  useVideoDetailQuery,
+} from "../redux/features/video";
+import { useGetUserQuery } from "../redux/features/auth";
+import {
+  useAllCommentsQuery,
+  useAddCommentMutation,
+  useLikeCommentMutation,
+} from "../redux/features/comments";
 import Loader from "../components/Loader";
+import Comment from "../components/comment";
+import { useSubscribeChannelMutation } from "../redux/features/channel";
 
 const upload_url = process.env.REACT_APP_ASSET_URL;
 
 const VideoPage = () => {
+  const [commentState, setCommentState] = useState("");
+  const [reply, setReply] = useState();
   const { id } = useParams();
-  const { data, isLoading } = useVideoDetailQuery(id);
+
+  const userData = useGetUserQuery(id);
+  const videoData = useVideoDetailQuery(id);
+  const comments = useAllCommentsQuery(videoData.data?.videoDetail._id);
+  const [commentApi] = useAddCommentMutation();
+  const [likeVideoApi] = useLikeVideoMutation();
+  const [followChannelApi] = useSubscribeChannelMutation();
+  const [likeCommentApi] = useLikeCommentMutation();
+
+  const commentSubmit = (id) => {
+    if (id) {
+      commentApi({
+        user: userData.data.user._id,
+        text: commentState,
+        video: videoData.data.videoDetail._id,
+        replies: id,
+      });
+    } else {
+      commentApi({
+        user: userData.data.user._id,
+        text: commentState,
+        video: videoData.data.videoDetail._id,
+      });
+    }
+
+    setCommentState("");
+    setReply(null);
+  };
 
   const categories = [
     "All",
@@ -37,7 +76,7 @@ const VideoPage = () => {
     "Cast",
   ];
 
-  if (isLoading) {
+  if (videoData.isLoading) {
     return <Loader />;
   }
 
@@ -62,7 +101,12 @@ const VideoPage = () => {
               </div>
               <div className="mt-3 flex gap-x-2 h-[300px]">
                 <div className="w-[60%]">
-                  <video src={upload_url + data.videoDetail.video} controls autoPlay className="h-full w-full" />
+                  <video
+                    src={upload_url + videoData.data.videoDetail.video}
+                    controls
+                    autoPlay
+                    className="h-full w-full"
+                  />
                 </div>
                 <div className="w-[40%] flex flex-col bg-[#1B1B1B] relative">
                   <img src={AdImage} className="h-full w-full" alt="" />
@@ -86,13 +130,42 @@ const VideoPage = () => {
                           <p className="text-[10px]">18.6k Subscription</p>
                         </div>
                       </div>
-                      <Button enabled={"Follow"}>Follow</Button>
+                      {(userData.data.user.subscribed.includes(
+                        videoData.data.videoDetail.channel
+                      ) &&
+                        "Following") || (
+                        <Button
+                          onClick={() =>
+                            followChannelApi({
+                              channel: videoData.data.videoDetail.channel,
+                            })
+                          }
+                          enabled={"Follow"}
+                        >
+                          Follow
+                        </Button>
+                      )}
                     </div>
                     <div className="flex gap-x-3 justify-between items-center">
-                      <div className="flex justify-center items-center gap-x-[6px]">
-                        <img src={likeIcon} alt="like_icon" />
-                        <span>Likes</span>
-                      </div>
+                      {videoData.data?.videoDetail.like.includes(
+                        userData.data.user._id
+                      ) ? (
+                        <div
+                          onClick={() => likeVideoApi({ id })}
+                          className="flex justify-center items-center gap-x-[6px]"
+                        >
+                          <img src={likeIcon} alt="like_icon" />
+                          <span>Liked</span>
+                        </div>
+                      ) : (
+                        <div
+                          onClick={() => likeVideoApi({ id })}
+                          className="flex justify-center items-center gap-x-[6px]"
+                        >
+                          <img src={likeIcon} alt="like_icon" />
+                          <span>Likes</span>
+                        </div>
+                      )}
                       <div className="flex justify-center items-center gap-x-[6px]">
                         <img src={shareIcon} alt="share_icon" />
                         <span>Share</span>
@@ -113,89 +186,32 @@ const VideoPage = () => {
                   </div>
                   <LineDivider />
                   <div>
-                    <h2 className="text-[20px] font-bold">30 Comments</h2>
+                    <h2 className="text-[20px] font-bold">
+                      {comments.data?.comment.length} Comments
+                    </h2>
+                    <div>
+                      {reply && `Reply to ${reply.name}`}
+                      <br />
+                      <input
+                        type="text"
+                        placeholder="Enter your comment"
+                        className="border border-gray-300 rounded-md me-4 text-black"
+                        value={commentState}
+                        onChange={(e) => setCommentState(e.target.value)}
+                      />
+                      <button onClick={() => commentSubmit(reply?.id)}>
+                        Submit
+                      </button>
+                    </div>
                     <div className="flex flex-col gap-y-6 mt-6">
-                      <div className="flex gap-x-2 items-start">
-                        <img src={profilePic} height={59} width={59} alt="" />
-                        <div className="flex flex-col gap-y-3">
-                          <p className="text-[11px] font-bold">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry
-                          </p>
-                          <p className="text-[7px]">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industryLorem Ipsum is simply dummy text
-                            of the printing and typesetting industryLorem Ipsum
-                            is simply dummy text of the printing and typesetting
-                            industry
-                          </p>
-                          <div className="flex gap-x-2">
-                            <img height={14} width={14} src={likeIcon} alt="" />
-                            <span className="text-[13px]">8 likes</span>
-                            <img
-                              height={14}
-                              width={14}
-                              src={dislikeIcon}
-                              alt=""
-                            />
-                            <span className="text-[13px]">Reply</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex gap-x-2 items-start">
-                        <img src={profilePic} height={59} width={59} alt="" />
-                        <div className="flex flex-col gap-y-3">
-                          <p className="text-[11px] font-bold">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry
-                          </p>
-                          <p className="text-[7px]">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industryLorem Ipsum is simply dummy text
-                            of the printing and typesetting industryLorem Ipsum
-                            is simply dummy text of the printing and typesetting
-                            industry
-                          </p>
-                          <div className="flex gap-x-2">
-                            <img height={14} width={14} src={likeIcon} alt="" />
-                            <span className="text-[13px]">8 likes</span>
-                            <img
-                              height={14}
-                              width={14}
-                              src={dislikeIcon}
-                              alt=""
-                            />
-                            <span className="text-[13px]">Reply</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex gap-x-2 items-start">
-                        <img src={profilePic} height={59} width={59} alt="" />
-                        <div className="flex flex-col gap-y-3">
-                          <p className="text-[11px] font-bold">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry
-                          </p>
-                          <p className="text-[7px]">
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industryLorem Ipsum is simply dummy text
-                            of the printing and typesetting industryLorem Ipsum
-                            is simply dummy text of the printing and typesetting
-                            industry
-                          </p>
-                          <div className="flex gap-x-2">
-                            <img height={14} width={14} src={likeIcon} alt="" />
-                            <span className="text-[13px]">8 likes</span>
-                            <img
-                              height={14}
-                              width={14}
-                              src={dislikeIcon}
-                              alt=""
-                            />
-                            <span className="text-[13px]">Reply</span>
-                          </div>
-                        </div>
-                      </div>
+                      {comments.data?.comment.map((comment) => (
+                        <Comment
+                          {...comment}
+                          likeCommentApi={likeCommentApi}
+                          setReply={setReply}
+                          comments={comments.data?.comment}
+                        />
+                      ))}
                     </div>
                   </div>
                 </div>

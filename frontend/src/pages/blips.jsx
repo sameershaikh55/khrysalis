@@ -11,7 +11,6 @@ function ScrollContainer() {
 
     useEffect(() => {
         const handleKeyDown = (event) => {
-            console.log('Mai chal gaya')
             const element = document.getElementById('blips-container'); // actual id of your div
             if (element) {
                 const { key } = event;

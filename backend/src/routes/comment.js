@@ -23,6 +23,6 @@ router
   .put(authentication, updateComment)
   .delete(authentication, deleteComment);
 
-router.route("/like/:id").get(authentication, likeComment);
+router.route("/like").post(authentication, likeComment);
 
 module.exports = router;

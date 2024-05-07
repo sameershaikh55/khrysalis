@@ -36,7 +36,9 @@ exports.allVideos = catchAsyncErrors(async (req, res, next) => {
   //   }
   // }
 
-  const videos = await VideoModel.find().populate("channel", "title");
+  const videos = await VideoModel.find()
+    .populate("channel", "title")
+    .sort({ createdAt: -1 });
   sendResponse(true, 200, "video", videos, res);
 });
 
@@ -70,7 +72,7 @@ exports.deleteVideo = catchAsyncErrors(async (req, res, next) => {
 
 // Update video
 exports.updateVideo = catchAsyncErrors(async (req, res, next) => {
-  const { id } = req.params;
+  const { id } = req.body;
 
   const updatedVideo = await VideoModel.findByIdAndUpdate(id, req.body, {
     new: true,
@@ -86,7 +88,7 @@ exports.updateVideo = catchAsyncErrors(async (req, res, next) => {
 
 // Update BG
 exports.uploadVideoFile = catchAsyncErrors(async (req, res, next) => {
-  const { id } = req.params;
+  const { id } = req.body;
 
   let bdy = req.body;
   bdy.video = bdy.upload;
@@ -105,7 +107,7 @@ exports.uploadVideoFile = catchAsyncErrors(async (req, res, next) => {
 
 // Update BG
 exports.uploadThumbnailFile = catchAsyncErrors(async (req, res, next) => {
-  const { id } = req.params;
+  const { id } = req.body;
 
   let bdy = req.body;
   bdy.thumbnail = bdy.upload;
@@ -124,7 +126,7 @@ exports.uploadThumbnailFile = catchAsyncErrors(async (req, res, next) => {
 
 // Update BG
 exports.likeVideo = catchAsyncErrors(async (req, res, next) => {
-  const { id } = req.params;
+  const { id } = req.body;
   const userID = res.user._id;
 
   // Check if the user has already liked the video

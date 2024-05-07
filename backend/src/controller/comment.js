@@ -20,7 +20,9 @@ exports.createComment = catchAsyncErrors(async (req, res, next) => {
 // all comment
 exports.allComments = catchAsyncErrors(async (req, res, next) => {
   const { id } = req.params;
-  const comments = await CommentModel.find({ video: id });
+  const comments = await CommentModel.find({ video: id })
+    .populate("user")
+    .sort({ createdAt: -1 });
   sendResponse(true, 200, "comment", comments, res);
 });
 
@@ -45,7 +47,7 @@ exports.updateComment = catchAsyncErrors(async (req, res, next) => {
 
 // Update like
 exports.likeComment = catchAsyncErrors(async (req, res, next) => {
-  const { id } = req.params;
+  const { id } = req.body;
   const userID = res.user._id;
 
   // Check if the user has already liked the comment

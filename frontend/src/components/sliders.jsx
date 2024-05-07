@@ -18,7 +18,7 @@ const upload_url = process.env.REACT_APP_ASSET_URL;
 export default function Slider(props) {
   const { data: videos, isLoading } = useAllVideosQuery();
   const [data, setData] = useState([]);
-  console.log(videos);
+  
   useEffect(() => {
     setData(props?.data);
   }, [props.data]);
@@ -36,7 +36,10 @@ export default function Slider(props) {
 
             return (
               <SwiperSlide className="!bg-transparent relative" key={index}>
-                <Link to={`/video/${val?._id}`} className="flex flex-col gap-y-1">
+                <Link
+                  to={`/video/${val?._id}`}
+                  className="flex flex-col gap-y-1"
+                >
                   <div className="relative">
                     {!props?.liveNews && (
                       <div className="w-full h-full flex justify-center items-center absolute">

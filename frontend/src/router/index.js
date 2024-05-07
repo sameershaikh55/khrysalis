@@ -49,13 +49,13 @@ import VideoPage from "../pages/video";
 import HistoryPage from "../pages/History";
 import Public from "../components/Route/PublicRoute";
 import Protected from "../components/Route/ProtectedRoute";
+import VideoUploadPage from "../pages/channel/video-upload";
 
 const AppRouter = () => {
   const routes = [
     { path: "/", element: <HomePage /> },
     { path: "/trending", element: <TrendingPage /> },
     { path: "/news", element: <NewsPage /> },
-    { path: "/video/:id", element: <VideoPage /> },
   ];
 
   const publicRoutes = [
@@ -64,6 +64,8 @@ const AppRouter = () => {
   ];
 
   const protectedRoutes = [
+    { path: "/channel/video-upload", element: <VideoUploadPage /> },
+    { path: "/video/:id", element: <VideoPage /> },
     { path: "/followers", element: <FollowersPage /> },
     { path: "/library", element: <LibraryPage /> },
     { path: "/liked", element: <LikedPage /> },

@@ -36,6 +36,7 @@ const channel = require("./routes/channel");
 const video = require("./routes/video");
 const comment = require("./routes/comment");
 const playlist = require("./routes/playlist");
+const product = require("./routes/product");
 
 // TESTING
 app.get("/", (req, res) => {
@@ -48,6 +49,7 @@ app.use("/api/channel", channel);
 app.use("/api/video", video);
 app.use("/api/comment", comment);
 app.use("/api/playlist", playlist);
+app.use("/api/product", product);
 
 // Middleware for Errors
 app.use(errorMiddleware);

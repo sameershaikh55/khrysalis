@@ -34,13 +34,13 @@ router
   .delete(authentication, deleteVideo);
 
 router
-  .route("/video-file/:id")
+  .route("/video-file")
   .patch(authentication, upload.single("video"), uploadVideoFile);
 
 router
-  .route("/thumbnail/:id")
+  .route("/thumbnail")
   .patch(authentication, upload.single("thumbnail"), uploadThumbnailFile);
 
-router.route("/like/:id").get(authentication, likeVideo);
+router.route("/like").post(authentication, likeVideo);
 
 module.exports = router;
