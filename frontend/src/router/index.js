@@ -50,24 +50,29 @@ import HistoryPage from "../pages/History";
 import Public from "../components/Route/PublicRoute";
 import Protected from "../components/Route/ProtectedRoute";
 import VideoUploadPage from "../pages/channel/video-upload";
+import ProductAddPage from "../pages/productAddPage";
+import StoreEdit from "../pages/storeEdit";
 
 const AppRouter = () => {
   const routes = [
     { path: "/", element: <HomePage /> },
     { path: "/trending", element: <TrendingPage /> },
     { path: "/news", element: <NewsPage /> },
+    { path: "/store", element: <StorePage /> },
+    { path: "/product/details", element: <ProductDetailsPage /> },
   ];
 
   const publicRoutes = [
     { path: "/login", element: <LoginPage /> },
     { path: "/signup", element: <SignupPage /> },
-    { path: "/store", element: <StorePage /> },
-    { path: "/product/details", element: <ProductDetailsPage /> },
   ];
 
   const protectedRoutes = [
     { path: "/channel/video-upload", element: <VideoUploadPage /> },
     { path: "/video/:id", element: <VideoPage /> },
+    { path: "/store/product/add", element: <ProductAddPage /> },
+    { path: "/store/product/edit/:id", element: <ProductAddPage /> },
+    { path: "/store/edit", element: <StoreEdit /> },
     { path: "/followers", element: <FollowersPage /> },
     { path: "/library", element: <LibraryPage /> },
     { path: "/liked", element: <LikedPage /> },

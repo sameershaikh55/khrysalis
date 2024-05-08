@@ -53,7 +53,7 @@ const ProductDetailsPage = () => {
                     {data.product.description}
                   </p>
                   <span className="block text-[35px] font-bold">
-                    {data.product.price}
+                    ${data.product.price}
                   </span>
                 </div>
               </div>

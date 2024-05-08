@@ -29,7 +29,7 @@ export const product = createApi({
       query: (body) => ({
         url: `/${body.id}`,
         method: "PUT",
-        body,
+        body: body.data,
       }),
       invalidatesTags: ["product"],
     }),

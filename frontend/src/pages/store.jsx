@@ -46,7 +46,7 @@ const StorePage = () => {
                           {val?.name}
                         </span>
                         <span className="block text-center text-[35px] font-light">
-                          {val?.price}
+                          ${val?.price}
                         </span>
                       </div>
                     </Link>
